@@ -26,12 +26,17 @@
 
 
     double LAN_A(){
+        int i = 0;
+        int null_counter = 0;
         double vo;
         double teta;
         double g;
+
         char str_vo[10];
         char str_teta[10];
         char str_g[10];
+
+        char strs[3] = [str_vo, str_teta, str_g]
 
 
 
@@ -42,9 +47,19 @@
         printf("Digite a aceleração imprimida no sistema em m/s²:\n");
         scanf("%c", &str_g);
 
-        double vo = strtod(str_vo, NULL);
-        double teta = strtod(str_teta, NULL);
-        double g = strtod(str_g, NULL);
+        for(i; i < sizeof(strs); i++){
+            if(strs[0] == 10){
+                null_counter++
+            }
+        }
+        if(null_counter > 1){
+            printf("Não é possível efeturar essa operação com mais de duas variáveis nulas;\n");
+        }
+
+
+        vo = strtod(str_vo, NULL);
+        teta = strtod(str_teta, NULL);
+        g = strtod(str_g, NULL);
 
         if(vo != null && != null && != null)
         if(teta > 360){
